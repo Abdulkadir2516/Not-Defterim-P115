@@ -89,6 +89,7 @@
             kaydetAynıDosyayaToolStripMenuItem.Name = "kaydetAynıDosyayaToolStripMenuItem";
             kaydetAynıDosyayaToolStripMenuItem.Size = new Size(242, 22);
             kaydetAynıDosyayaToolStripMenuItem.Text = "Kaydet (Aynı dosyaya)";
+            kaydetAynıDosyayaToolStripMenuItem.Click += kaydetAynıDosyayaToolStripMenuItem_Click;
             // 
             // farklıKaydetToolStripMenuItem
             // 
