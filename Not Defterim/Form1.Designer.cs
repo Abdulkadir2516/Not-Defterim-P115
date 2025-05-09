@@ -44,22 +44,27 @@
             temaDeğiştirAçıkKoyuToolStripMenuItem = new ToolStripMenuItem();
             yardımToolStripMenuItem = new ToolStripMenuItem();
             hakkındaUygulamaBilgisiToolStripMenuItem = new ToolStripMenuItem();
-            richTextBox1 = new RichTextBox();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
             toolStripStatusLabel3 = new ToolStripStatusLabel();
             toolStripStatusLabel4 = new ToolStripStatusLabel();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            richTextBox1 = new RichTextBox();
+            tabPage2 = new TabPage();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.Items.AddRange(new ToolStripItem[] { dosyaToolStripMenuItem, düzenToolStripMenuItem, görünümToolStripMenuItem, yardımToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Location = new Point(3, 3);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(794, 24);
+            menuStrip1.Size = new Size(780, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -96,12 +101,14 @@
             farklıKaydetToolStripMenuItem.Name = "farklıKaydetToolStripMenuItem";
             farklıKaydetToolStripMenuItem.Size = new Size(242, 22);
             farklıKaydetToolStripMenuItem.Text = "Farklı Kaydet…";
+            farklıKaydetToolStripMenuItem.Click += farklıKaydetToolStripMenuItem_Click;
             // 
             // çıkışToolStripMenuItem
             // 
             çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
             çıkışToolStripMenuItem.Size = new Size(242, 22);
             çıkışToolStripMenuItem.Text = "Çıkış";
+            çıkışToolStripMenuItem.Click += çıkışToolStripMenuItem_Click;
             // 
             // düzenToolStripMenuItem
             // 
@@ -160,16 +167,6 @@
             hakkındaUygulamaBilgisiToolStripMenuItem.Size = new Size(223, 22);
             hakkındaUygulamaBilgisiToolStripMenuItem.Text = "Hakkında (Uygulama bilgisi)";
             // 
-            // richTextBox1
-            // 
-            richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.Location = new Point(0, 24);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(794, 590);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
-            // 
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3, toolStripStatusLabel4 });
@@ -204,14 +201,55 @@
             toolStripStatusLabel4.Size = new Size(118, 17);
             toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(794, 592);
+            tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(richTextBox1);
+            tabPage1.Controls.Add(menuStrip1);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(786, 564);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Location = new Point(3, 27);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(780, 534);
+            richTextBox1.TabIndex = 1;
+            richTextBox1.Text = "";
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(786, 564);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(794, 614);
+            Controls.Add(tabControl1);
             Controls.Add(statusStrip1);
-            Controls.Add(richTextBox1);
-            Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
@@ -219,6 +257,9 @@
             menuStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,11 +282,14 @@
         private ToolStripMenuItem yazıTipiSeçToolStripMenuItem;
         private ToolStripMenuItem temaDeğiştirAçıkKoyuToolStripMenuItem;
         private ToolStripMenuItem hakkındaUygulamaBilgisiToolStripMenuItem;
-        private RichTextBox richTextBox1;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel toolStripStatusLabel2;
         private ToolStripStatusLabel toolStripStatusLabel3;
         private ToolStripStatusLabel toolStripStatusLabel4;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private RichTextBox richTextBox1;
+        private TabPage tabPage2;
     }
 }

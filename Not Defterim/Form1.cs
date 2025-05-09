@@ -24,6 +24,7 @@ namespace Not_Defterim
         {
             richTextBox1.Text = "";
             this.check = true;
+
         }
 
         private void açDosyaSeçipÝçeriðiniGetirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,8 +75,17 @@ namespace Not_Defterim
 
             }
         }
-            
-          
+
+        private void farklýKaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            kaydet(this.dosya_yolu, true);
+
+        }
+
+        private void çýkýþToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 
