@@ -10,9 +10,12 @@ namespace Not_Defterim
 
         private string dosya_yolu = "";
         private bool check = true;
+        private RichTextBox[] richTextBoxes = new RichTextBox[20];
+
         public Form1()
         {
             InitializeComponent();
+            richTextBoxes[0] = richTextBox1;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -22,7 +25,20 @@ namespace Not_Defterim
 
         private void yeniYeniSayfaAçToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "";
+
+            string title = "Adsýz";
+            TabPage myTabPage = new TabPage(title);
+            tabControl1.TabPages.Add(myTabPage);
+            RichTextBox richTextBox = new RichTextBox();
+
+            richTextBox.Name = (tabControl1.TabCount + 1).ToString();
+            //MessageBox.Show(tabControl1.TabCount.ToString());
+            richTextBoxes[tabControl1.TabCount-1] = richTextBox;
+
+            myTabPage.Controls.Add(richTextBox);
+            myTabPage.Dock = DockStyle.Fill;
+            richTextBox.Dock = DockStyle.Fill;
+
             this.check = true;
 
         }
@@ -62,14 +78,18 @@ namespace Not_Defterim
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    //MessageBox.Show(tabControl1.SelectedIndex.ToString());
+
+                    //tabControl1.SelectedTab.Controls["richTextBox1"].Text;
                     // RichTextBox'tan düz metni al ve dosyaya yaz
-                    File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
+
+                    File.WriteAllText(saveFileDialog.FileName, richTextBoxes[tabControl1.SelectedIndex].Text);
                     MessageBox.Show("Dosya baþarýyla kaydedildi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                File.WriteAllText(path, richTextBox1.Text);
+                File.WriteAllText(path, richTextBoxes[tabControl1.SelectedIndex].Text);
                 MessageBox.Show("Dosya baþarýyla kaydedildi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 

@@ -52,7 +52,6 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             richTextBox1 = new RichTextBox();
-            tabPage2 = new TabPage();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -62,9 +61,9 @@
             // menuStrip1
             // 
             menuStrip1.Items.AddRange(new ToolStripItem[] { dosyaToolStripMenuItem, düzenToolStripMenuItem, görünümToolStripMenuItem, yardımToolStripMenuItem });
-            menuStrip1.Location = new Point(3, 3);
+            menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(780, 24);
+            menuStrip1.Size = new Size(794, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -204,44 +203,34 @@
             // tabControl1
             // 
             tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
             tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 0);
+            tabControl1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            tabControl1.Location = new Point(0, 24);
+            tabControl1.Margin = new Padding(5);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(794, 592);
+            tabControl1.Size = new Size(794, 568);
             tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
             tabPage1.Controls.Add(richTextBox1);
-            tabPage1.Controls.Add(menuStrip1);
-            tabPage1.Location = new Point(4, 24);
+            tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(786, 564);
+            tabPage1.Size = new Size(786, 534);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Adsız";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // richTextBox1
             // 
             richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.Location = new Point(3, 27);
+            richTextBox1.Location = new Point(3, 3);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(780, 534);
+            richTextBox1.Size = new Size(780, 528);
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "";
-            // 
-            // tabPage2
-            // 
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(786, 564);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -249,6 +238,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(794, 614);
             Controls.Add(tabControl1);
+            Controls.Add(menuStrip1);
             Controls.Add(statusStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
@@ -259,7 +249,6 @@
             statusStrip1.PerformLayout();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -287,9 +276,8 @@
         private ToolStripStatusLabel toolStripStatusLabel2;
         private ToolStripStatusLabel toolStripStatusLabel3;
         private ToolStripStatusLabel toolStripStatusLabel4;
-        private TabControl tabControl1;
         private TabPage tabPage1;
         private RichTextBox richTextBox1;
-        private TabPage tabPage2;
+        public TabControl tabControl1;
     }
 }
