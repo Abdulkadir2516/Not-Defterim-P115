@@ -25,21 +25,7 @@ namespace Not_Defterim
 
         private void yeniYeniSayfaAçToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            string title = "Adsýz";
-            TabPage myTabPage = new TabPage(title);
-            tabControl1.TabPages.Add(myTabPage);
-            RichTextBox richTextBox = new RichTextBox();
-
-            richTextBox.Name = (tabControl1.TabCount + 1).ToString();
-            //MessageBox.Show(tabControl1.TabCount.ToString());
-            richTextBoxes[tabControl1.TabCount-1] = richTextBox;
-
-            myTabPage.Controls.Add(richTextBox);
-            myTabPage.Dock = DockStyle.Fill;
-            richTextBox.Dock = DockStyle.Fill;
-
-            this.check = true;
+            open_new_page();
 
         }
 
@@ -105,6 +91,52 @@ namespace Not_Defterim
         private void çýkýþToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            open_new_page();
+        }
+
+        private void open_new_page()
+        {
+
+            TabPage myTabPage = new TabPage("Adsýz " + tabControl1.TabCount);
+            tabControl1.TabPages.Add(myTabPage);
+            RichTextBox richTextBox = new RichTextBox();
+
+            richTextBox.Name = (tabControl1.TabCount + 1).ToString();
+            //MessageBox.Show(tabControl1.TabCount.ToString());
+            richTextBoxes[tabControl1.TabCount - 1] = richTextBox;
+
+            myTabPage.Controls.Add(richTextBox);
+            myTabPage.Dock = DockStyle.Fill;
+            richTextBox.Dock = DockStyle.Fill;
+
+            this.check = true;
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabControl1.TabPages[tabControl1.SelectedIndex]);
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            for(int i = tabControl1.TabCount-1; i>-1; i--)
+            {
+                if(tabControl1.TabPages[tabControl1.SelectedIndex] != tabControl1.TabPages[i])
+                {
+                    tabControl1.TabPages.Remove(tabControl1.TabPages[i]);
+
+                }
+            }
         }
     }
 

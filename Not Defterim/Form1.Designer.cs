@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             dosyaToolStripMenuItem = new ToolStripMenuItem();
             yeniYeniSayfaAçToolStripMenuItem = new ToolStripMenuItem();
@@ -50,11 +51,16 @@
             toolStripStatusLabel3 = new ToolStripStatusLabel();
             toolStripStatusLabel4 = new ToolStripStatusLabel();
             tabControl1 = new TabControl();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
             tabPage1 = new TabPage();
             richTextBox1 = new RichTextBox();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
+            contextMenuStrip1.SuspendLayout();
             tabPage1.SuspendLayout();
             SuspendLayout();
             // 
@@ -202,9 +208,12 @@
             // 
             // tabControl1
             // 
+            tabControl1.AllowDrop = true;
+            tabControl1.ContextMenuStrip = contextMenuStrip1;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            tabControl1.HotTrack = true;
             tabControl1.Location = new Point(0, 24);
             tabControl1.Margin = new Padding(5);
             tabControl1.Name = "tabControl1";
@@ -212,8 +221,36 @@
             tabControl1.Size = new Size(794, 568);
             tabControl1.TabIndex = 2;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, toolStripMenuItem3 });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(190, 70);
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(189, 22);
+            toolStripMenuItem1.Text = "Yeni Sekme Aç";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(189, 22);
+            toolStripMenuItem2.Text = "Sekmeyi Kapat";
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(189, 22);
+            toolStripMenuItem3.Text = "Diğer Sekmeleri Kapat";
+            toolStripMenuItem3.Click += toolStripMenuItem3_Click;
+            // 
             // tabPage1
             // 
+            tabPage1.AllowDrop = true;
             tabPage1.Controls.Add(richTextBox1);
             tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
@@ -248,6 +285,7 @@
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             tabControl1.ResumeLayout(false);
+            contextMenuStrip1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -279,5 +317,9 @@
         private TabPage tabPage1;
         private RichTextBox richTextBox1;
         public TabControl tabControl1;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem toolStripMenuItem3;
     }
 }
