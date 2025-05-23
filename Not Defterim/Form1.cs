@@ -129,14 +129,102 @@ namespace Not_Defterim
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            for(int i = tabControl1.TabCount-1; i>-1; i--)
+            for (int i = tabControl1.TabCount - 1; i > -1; i--)
             {
-                if(tabControl1.TabPages[tabControl1.SelectedIndex] != tabControl1.TabPages[i])
+                if (tabControl1.TabPages[tabControl1.SelectedIndex] != tabControl1.TabPages[i])
                 {
                     tabControl1.TabPages.Remove(tabControl1.TabPages[i]);
 
                 }
             }
+        }
+
+        private void tümSekmeleriKapatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = tabControl1.TabCount - 1; i > -1; i--)
+            {
+
+                tabControl1.TabPages.Remove(tabControl1.TabPages[i]);
+
+
+            }
+        }
+
+        private void görünümToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kesKopyalaYapýþtýrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Cut();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void geriAlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Undo();
+
+        }
+
+        private void tümünüSeçToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].SelectAll();
+
+        }
+
+        private void kopyalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Copy();
+        }
+
+        private void yapýþtýrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Paste();
+        }
+
+        private void richTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Cut();
+
+        }
+
+        private void kopyalaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Copy();
+
+        }
+
+        private void yapýþtýrToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Paste();
+
+        }
+
+        private void tümünüSeçToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].SelectAll();
+
+        }
+
+        private void geriAlToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBoxes[tabControl1.SelectedIndex].Undo();
+
         }
     }
 
