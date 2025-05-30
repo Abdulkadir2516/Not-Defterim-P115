@@ -1,21 +1,49 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 
 namespace Not_Defterim
+
 {
     public partial class Form1 : Form
     {
-
+        private Color arkaplan_rengi = Color.White;
+        private Color yazi_rengi = Color.Black;
         private string dosya_yolu = "";
         private bool check = true;
         private RichTextBox[] richTextBoxes = new RichTextBox[20];
 
+        private void tema_degistir()
+        {
+
+            this.BackColor = arkaplan_rengi;
+            this.ForeColor = yazi_rengi;
+            menuStrip1.BackColor = arkaplan_rengi;
+            menuStrip1.ForeColor = yazi_rengi;
+            tabPage1.BackColor = arkaplan_rengi;
+            tabPage1.ForeColor = yazi_rengi;
+            richTextBox1.BackColor = arkaplan_rengi;
+            richTextBox1.ForeColor = yazi_rengi;
+
+            for (int i = tabControl1.TabCount - 1; i > -1; i--)
+            {
+
+                richTextBoxes[i].BackColor = arkaplan_rengi;
+                richTextBoxes[i].ForeColor = yazi_rengi;
+
+
+            }
+        }
         public Form1()
         {
             InitializeComponent();
             richTextBoxes[0] = richTextBox1;
+
+            tema_degistir();
+
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -118,7 +146,11 @@ namespace Not_Defterim
             myTabPage.Controls.Add(richTextBox);
             myTabPage.Dock = DockStyle.Fill;
             richTextBox.Dock = DockStyle.Fill;
-
+            richTextBox.ContextMenuStrip = contextMenuStrip1;
+            myTabPage.BackColor = arkaplan_rengi;
+            myTabPage.ForeColor = yazi_rengi;
+            richTextBox.BackColor = arkaplan_rengi;
+            richTextBox.ForeColor = yazi_rengi;
             this.check = true;
         }
 
@@ -224,6 +256,36 @@ namespace Not_Defterim
         private void geriAlToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             richTextBoxes[tabControl1.SelectedIndex].Undo();
+
+        }
+
+        private void yazýTipiSeçToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.Font = fontDialog1.Font;
+            }
+        }
+
+        private void temaDeðiþtirAçýkKoyuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (arkaplan_rengi == Color.White)
+            {
+                arkaplan_rengi = Color.Black;
+                yazi_rengi = Color.White;
+            }
+            else
+            {
+                arkaplan_rengi = Color.White;
+                yazi_rengi = Color.Black;
+            }
+            tema_degistir();
+        }
+
+        private void hakkýndaUygulamaBilgisiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();  
 
         }
     }

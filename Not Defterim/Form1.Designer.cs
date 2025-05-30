@@ -66,6 +66,7 @@
             yapıştırToolStripMenuItem1 = new ToolStripMenuItem();
             tümünüSeçToolStripMenuItem1 = new ToolStripMenuItem();
             geriAlToolStripMenuItem1 = new ToolStripMenuItem();
+            fontDialog1 = new FontDialog();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -181,12 +182,14 @@
             yazıTipiSeçToolStripMenuItem.Name = "yazıTipiSeçToolStripMenuItem";
             yazıTipiSeçToolStripMenuItem.Size = new Size(212, 22);
             yazıTipiSeçToolStripMenuItem.Text = "Yazı Tipi Seç…";
+            yazıTipiSeçToolStripMenuItem.Click += yazıTipiSeçToolStripMenuItem_Click;
             // 
             // temaDeğiştirAçıkKoyuToolStripMenuItem
             // 
             temaDeğiştirAçıkKoyuToolStripMenuItem.Name = "temaDeğiştirAçıkKoyuToolStripMenuItem";
             temaDeğiştirAçıkKoyuToolStripMenuItem.Size = new Size(212, 22);
             temaDeğiştirAçıkKoyuToolStripMenuItem.Text = "Tema Değiştir (Açık/Koyu)";
+            temaDeğiştirAçıkKoyuToolStripMenuItem.Click += temaDeğiştirAçıkKoyuToolStripMenuItem_Click;
             // 
             // yardımToolStripMenuItem
             // 
@@ -200,6 +203,7 @@
             hakkındaUygulamaBilgisiToolStripMenuItem.Name = "hakkındaUygulamaBilgisiToolStripMenuItem";
             hakkındaUygulamaBilgisiToolStripMenuItem.Size = new Size(223, 22);
             hakkındaUygulamaBilgisiToolStripMenuItem.Text = "Hakkında (Uygulama bilgisi)";
+            hakkındaUygulamaBilgisiToolStripMenuItem.Click += hakkındaUygulamaBilgisiToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
@@ -350,6 +354,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(808, 644);
             Controls.Add(menuStrip1);
             Controls.Add(tabControl1);
@@ -408,5 +413,6 @@
         private ToolStripMenuItem yapıştırToolStripMenuItem1;
         private ToolStripMenuItem tümünüSeçToolStripMenuItem1;
         private ToolStripMenuItem geriAlToolStripMenuItem1;
+        private FontDialog fontDialog1;
     }
 }
