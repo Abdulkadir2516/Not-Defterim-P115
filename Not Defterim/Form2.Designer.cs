@@ -57,7 +57,7 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(154, 242);
+            linkLabel1.Location = new Point(103, 324);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(126, 15);
             linkLabel1.TabIndex = 2;
@@ -68,22 +68,24 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(145, 281);
+            linkLabel2.Location = new Point(274, 324);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(60, 15);
+            linkLabel2.Size = new Size(163, 15);
             linkLabel2.TabIndex = 3;
             linkLabel2.TabStop = true;
-            linkLabel2.Text = "linkLabel2";
+            linkLabel2.Text = "Linkedin Abdulkadir Yeşilkaya";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // linkLabel3
             // 
             linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(137, 313);
+            linkLabel3.Location = new Point(547, 324);
             linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(60, 15);
+            linkLabel3.Size = new Size(49, 15);
             linkLabel3.TabIndex = 4;
             linkLabel3.TabStop = true;
-            linkLabel3.Text = "linkLabel3";
+            linkLabel3.Text = "Website";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // Form2
             // 

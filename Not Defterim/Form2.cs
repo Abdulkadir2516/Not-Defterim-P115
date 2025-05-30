@@ -24,7 +24,7 @@ namespace Not_Defterim
             //Ziyaret edildiği zaman linkin renginin değişimini sağlamak için LinkVisited'a true değeri atanır.
             linkLabel1.LinkVisited = true;
 
-            var url = "https://www.google.com";
+            var url = "https://github.com/Abdulkadir2516/Not-Defterim-P115";
 
             try
             {
@@ -61,6 +61,40 @@ namespace Not_Defterim
             catch (Exception ex)
             {
                 Console.WriteLine($"URL açma hatası: {ex.Message}");
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Ziyaret edildiği zaman linkin renginin değişimini sağlamak için LinkVisited'a true değeri atanır.
+            linkLabel1.LinkVisited = true;
+
+            var url = "https://www.linkedin.com/in/abdulkadir-yesilkaya-872a95256/";
+
+            try
+            {
+                OpenUrl(url);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hata: " + ex.Message);
+            }
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Ziyaret edildiği zaman linkin renginin değişimini sağlamak için LinkVisited'a true değeri atanır.
+            linkLabel1.LinkVisited = true;
+
+            var url = "https://greenrock.gen.tr/";
+
+            try
+            {
+                OpenUrl(url);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hata: " + ex.Message);
             }
         }
     }

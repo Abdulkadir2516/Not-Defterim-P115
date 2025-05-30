@@ -243,13 +243,14 @@
             // 
             tabControl1.ContextMenuStrip = contextMenuStrip1;
             tabControl1.Controls.Add(tabPage1);
+            tabControl1.Dock = DockStyle.Bottom;
             tabControl1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             tabControl1.HotTrack = true;
-            tabControl1.Location = new Point(0, 29);
+            tabControl1.Location = new Point(0, 30);
             tabControl1.Margin = new Padding(5);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(794, 592);
+            tabControl1.Size = new Size(808, 592);
             tabControl1.TabIndex = 2;
             // 
             // contextMenuStrip1
@@ -293,7 +294,7 @@
             tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(786, 558);
+            tabPage1.Size = new Size(800, 558);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Adsız";
             tabPage1.UseVisualStyleBackColor = true;
@@ -304,7 +305,7 @@
             richTextBox1.Dock = DockStyle.Fill;
             richTextBox1.Location = new Point(3, 3);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(780, 552);
+            richTextBox1.Size = new Size(794, 552);
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged_1;
