@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>NotDefteri Uygulaması, kullanıcıların hızlı ve pratik bir şekilde not almasını sağlamak amacıyla geliştirilmiştir. Basit, kullanıcı dostu arayüzü ve temel not alma özellikleriyle kişisel üretkenliği artırmayı hedefler.
+
+Bu uygulama,P115 sınıfı tarafından C# programlama dili kullanılarak geliştirilmiştir. Projemiz, yazılım geliştirme becerilerimizi artırmak ve gerçek bir kullanıcı ihtiyacına çözüm sunmak amacıyla tasarlanmıştır.
+</value>
+  </data>
 </root>

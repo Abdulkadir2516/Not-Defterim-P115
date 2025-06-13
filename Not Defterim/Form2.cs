@@ -97,6 +97,11 @@ namespace Not_Defterim
                 Console.WriteLine("Hata: " + ex.Message);
             }
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
